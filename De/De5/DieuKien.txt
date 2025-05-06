@@ -1,0 +1,24 @@
+1. Kiểm tra Mã thẻ 
+a. Mã thẻ: không được để trống. 
+Nếu để trống thì chương trình hiển thị thông báo yêu cầu nhập. 
+b. Mã thẻ bảo hiểm  có định dạng như sau: QN-XXXX hoặc CB-XXXX
+ hoặc CDXXXX, trong đó X là ký tự số.
+
+2. Kiểm tra họ tên: a. Họ tên không được để trống
+   b. Ký tự đầu của mỗi từ là chữ hoa
+
+ 3. Kiểm tra tuổi: 
+ a. Tuổi không được rỗng  b. Tuổi phải >16 
+
+ 3. Kiểm tra tuổi: 
+ a. Tuổi không được rỗng  
+ b. Tuổi phải >16 Gợi ý code 
+ 
+  4. Kiểm tra số điện thoại 
+  a. Số điện thoại không được rỗng 
+  b. Số điện thoại có định dạng là 10 con số trong đó luôn bắt đầu 09,03,08 hoặc 07
+
+5. Kiểm tra địa chỉ: a. Địa chỉ không được để trống
+
+6. Kiểm tra đối tượng
+Khi chọn đối tượng trong dropdown list thì trong ô tỉ lệ thanh toán hiển thị tỉ lệ tương ứng 

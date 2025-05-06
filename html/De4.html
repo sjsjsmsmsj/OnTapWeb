@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        #head {
+            background-image: url('../img/de4.png');
+            background-size: cover;
+            padding: 100px;
+        }
+        #nut {
+            padding-top: 10px;
+            margin-left: 500px;
+        }
+        .loiDo {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row" id="head">
+            <div class="col-12" id="nut">
+                <button class="btn btn-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#modalId"
+                >Đặt ngay</button>
+               
+                <!-- Modal Body -->
+                <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+                <div
+                    class="modal fade"
+                    id="modalId"
+                    tabindex="-1"
+                    data-bs-backdrop="static"
+                    data-bs-keyboard="false"
+                    
+                    role="dialog"
+                    aria-labelledby="modalTitleId"
+                    aria-hidden="true"
+                >
+                    <div
+                        class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md"
+                        role="document"
+                    >
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitleId">
+                                    THÔNG TIN ĐẶT HÀNG
+                                </h5>
+                                <button
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"
+                                ></button>
+                            </div>
+                            <form action="" id="formDangKy">
+                                <div class="modal-body">
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label for="">Ho ten</label>
+                                            <br>
+                                            <input type="text" placeholder="Nhập họ tên" id="hoTen">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 loiDo" id="loiDoHoTen"></div>
+                                    </div>
+    
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label for="">Địa chỉ</label>
+                                            <br>
+                                            <input type="text" placeholder="Nhập địa chỉ" id="diaChi">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 loiDo" id="loiDoDiaChi"></div>
+                                    </div>
+    
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label for="">Thời gian giao hàng</label>
+                                            <br>
+                                            <input type="text" placeholder="7:00 đến 8:30" id="thoiGianGiaoHang">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 loiDo" id="loiDoThoiGianGiaoHang"></div>
+                                    </div>
+    
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label for="">Email</label>
+                                            <br>
+                                            <input type="email" placeholder="Nhập họ tên" id="email">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 loiDo" id="loiDoEmail"></div>
+                                    </div>
+    
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label for="">Số điện thoại</label>
+                                            <br>
+                                            <input type="text" placeholder="Nhập số điện thoại" id="soDienThoai">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 loiDo" id="loiDoSoDienThoai"></div>
+                                    </div>
+                                </div>
+                            
+
+                            <div class="modal-footer">
+                                <button type="reset" class="btn btn-dark">Thoát</button>
+                                <button type="submit" class="btn btn-primary">Đặt hàng</button>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Optional: Place to the bottom of scripts -->
+                <script>
+                    const myModal = new bootstrap.Modal(
+                        document.getElementById("modalId"),
+                        options,
+                    );
+                </script>
+                
+            </div>
+        </div>
+        <div class="row">
+            <h1 class="text-center">DANH SÁCH KHÁCH HÀNG</h1>
+            <div
+                class="table-responsive"
+            >
+                <table
+                    class="table table-secondary"
+                >
+                    <thead>
+                        <tr>
+                            <td>Số TT</td>
+                            <td>Họ tên KH</td>
+                            <td>Địa chỉ</td>
+                            <td>Thời gian giao hàng</td>
+                            <td>Email</td>
+                            <td>Điện thoại</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        let stt = 1;
+        $('#formDangKy').submit(function(e){
+            e.preventDefault();
+            let hoTen = $('#hoTen').val().trim();
+            let diaChi = $('#diaChi').val().trim();
+            let thoiGianGiaoHang = $('#thoiGianGiaoHang').val().trim();
+            let email = $('#email').val().trim();
+            let soDienThoai = $('#soDienThoai').val().trim();
+
+            if (!/^([A-ZÀ-Ỹ]{1}[a-zà-ỹ]+)(\s[A-ZÀ-Ỹ]{1}[a-zà-ỹ]*)+$/.test(hoTen)) {
+                $('#loiDoHoTen').text("Chữ cái đầu của mỗi chữ phải viết hoa");
+                return;
+            } else {
+                $("#loiDoHoTen").text('');
+            }
+
+            if (!/^([A-ZÀ-Ỹ]+)(\s[A-ZÀ-Ỹ]+)*$/.test(diaChi)) {
+                $("#loiDoDiaChi").text("Phải viết hoa tất cả các từ");
+                return ;
+            } else {
+                $("#loiDoDiaChi").text("");
+            }
+
+            if (!/^[0-9]{1,2}:[0-9]{2}\sđến\s[0-9]{1,2}:[0-9]{2}$/.test(thoiGianGiaoHang)) {
+                $("#loiDoThoiGianGiaoHang").text("Phải nhập theo định dạng xx:xx đến xx:xx");
+                return;
+            } else {
+                $("#loiDoThoiGianGiaoHang").text('');
+            }
+
+            if (!/^0[0-9]+@iuh\.edu\.vn$/.test(email)) {
+                $("#loiDoEmail").text('xxxxx@iuh.edu.vn chữ số 0 ở đầu và các chữ số ở sau đúng định dạng.');
+                return;
+            } else {
+                $("#loiDoEmail").text('');
+            }
+
+            if (!/^0[0-9]{3}-[0-9]{3}-[0-9]{3}$/.test(soDienThoai)) {
+                $('#loiDoSoDienThoai').text("0xxx-xxx-xxx bắt buộc chữ số 0 ở đầu và các số sau theo định dạng.");
+                return;
+            } else {
+                $('#loiDoSoDienThoai').text("");
+
+            }
+
+            let dongMoi = `
+                <tr>
+                    <td>${stt++}</td>
+                    <td>${hoTen}</td>
+                    <td>${diaChi}</td>
+                    <td>${thoiGianGiaoHang}</td>
+                    <td>${email}</td>
+                    <td>${soDienThoai}</td>
+                </tr>
+            `
+            $('table tbody').append(dongMoi);
+            $('#modalId').modal('hide');
+            $('#formDangKy')[0].reset();
+        })
+    </script>
+</body>
+</html>

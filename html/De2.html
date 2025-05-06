@@ -238,10 +238,9 @@
                 $("#loiDoNgay").text("Ngày sinh hợp lệ khi tuổi từ 12 trở lên");
                 return;
             }
-
             let diaDiem = $('input[name="diaDiem"]:checked').val();
-            if(!diaDiem) {
-                $('#loiDoChon').text("Chưa chọn địa điểm");
+            if (!diaDiem) {
+                $('#loiDoChon').text("Chưa nhập địa điểm");
                 return;
             } else {
                 $('#loiDoChon').text('');

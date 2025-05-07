@@ -8,18 +8,8 @@
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <style>
-        .text-center {
-            background-color: rgb(34, 131, 34);
-            color: white;
-            height: 50px;
-            margin-top: 20px;
-        }
-        #dangKy:hover {
-            background-color: rgb(58, 146, 58);
-            color: white;
-        }
-        #tt {
-            color: rgb(30, 0, 128);
+        nav ul li a:hover {
+            background-color: greenyellow;
         }
         .loiDo {
             color: red;
@@ -27,18 +17,14 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <img src="../img/de2.png" alt="" width="100%" height="200px">
-            </div>
-        </div>
-        <div class="row">
 
+    <div class="container">
+        <img src="../img/de2.png" alt="" class="img-fluid" width="100%" height="350px">
+        <div class="row">
             <div class="col-2">
-                <nav class="navbar">
+                <nav>
                     <ul
-                        class="nav justify-content-center flex-column"
+                        class="nav justify-content-center  flex-column"
                     >
                         <li class="nav-item">
                             <a class="nav-link active" href="#" aria-current="page"
@@ -52,9 +38,11 @@
                             <a class="nav-link" href="#">Ưu đãi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"  data-bs-toggle="modal" data-bs-target="#modalId" id="dangKy">Đăng ký</a>
-                        
-                            
+                            <a class="nav-link" href="#"
+                            data-bs-toggle="modal"
+                                data-bs-target="#modalId"
+                            >Đăng ký</a>
+
                             <!-- Modal Body -->
                             <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
                             <div
@@ -75,7 +63,7 @@
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="modalTitleId">
-                                                <h4 id="tt">THÔNG TIN HỌC VIÊN</h4>
+                                                <h4 class="text-primary">THÔNG TIN HỌC VIÊN</h4>
                                             </h5>
                                             <button
                                                 type="button"
@@ -84,61 +72,77 @@
                                                 aria-label="Close"
                                             ></button>
                                         </div>
-                                        <div class="modal-body">
-                                            <form action="" id="formDangKy">
-                                                <div class="row">
-                                                    <div class="col-lg-12"><input type="text" id="hoTen" placeholder="Họ tên"></div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-lg-12 loiDo" id="loiDoHoTen">(*)</div>
-                                                </div>
+                                        <form action="" id="formDangKy">
+                                            <div class="modal-body">
 
-                                                <div class="row">
-                                                    <div class="col-lg-12"><input type="text" id="SDT" placeholder="Số điện thoại"></div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-lg-12 loiDo" id="loiDoSDT">(*)</div>
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-lg-12"><input type="text" id="email" placeholder="Email"></div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-lg-12 loiDo" id="loiDoEmail">(*)</div>
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-lg-12"><input type="text" id="diaChi" placeholder="Địa chỉ"></div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-lg-12 loiDo" id="loiDoDiaChi">(*)</div>
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-lg-12"><input type="date" id="ngay"></div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-lg-12 loiDo" id="loiDoNgay">(*)</div>
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-12">bạn muốn học giáo viên Hà Nội hay TPHCM</div>
-                                                </div>
                                                 <div class="row">
                                                     <div class="col-12">
-                                                        <input type="radio" name="diaDiem" id="" class="chonDD" value="Hà Nội">Hà Nội 
-                                                        <input type="radio" name="diaDiem" id="" class="chonDD" value="TPHCM">TPHCM 
+                                                        <input type="text" placeholder="Họ tên" id="hoTen" class="form-control">
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-lg-12 loiDo" id="loiDoChon">(*)</div>
+                                                    <div class="col-12 loiDo" id="loiDoHoTen">(*)</div>
                                                 </div>
 
-                                                <button type="submit" class="btn btn-primary">Đăng Ký</button>
-                                            </form>
-                                        </div>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <input type="text" placeholder="Số điện thoại" id="soDienThoai" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 loiDo" id="loiDoSoDienThoai">(*)</div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <input type="text" placeholder="Email" id="email" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 loiDo" id="loiDoEmail" class="form-control">(*)</div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <input type="text" placeholder="Địa chỉ" id="diaChi" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 loiDo" id="loiDoDiaChi" class="form-control">(*)</div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <input type="date"  id="ngay" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 loiDo" id="loiDoNgay" class="form-control">(*)</div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <label for="">Bạn muốn học giáo viên Hà Nội hay TPHCM</label>
+                                                        <br>
+                                                        <input type="radio" name="giaoVien" class="giaoVien" id="haNoi" value="Hà Nội"> <label for="">Hà Nội</label>
+                                                        <input type="radio" name="giaoVien" class="giaoVien" id="tpHCM" value="TPHCM"> <label for="">TPHCM</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 loiDo" id="loiDoGiaoVien">(*)</div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <button type="submit" class="btn btn-primary">Đăng ký</button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </form>
+
                                         <div class="modal-footer">
-                                            <h5 class="text-left" style="background-color: white; color:blue">23703881-Lâm Gia Thịnh-DHKHMT19A</h5>
+                                            <p class="text-center text-primary">23703881_Lâm Gia Thịnh-DHKHMT19A</p>
                                         </div>
                                     </div>
                                 </div>
@@ -157,110 +161,108 @@
                     
                 </nav>
             </div>
-            
             <div class="col-10">
-                <h3>DANH SACH ĐĂNG KÝ KHÓA HỌC</h3>
+                <h2>DANH SÁCH ĐĂNG KÝ KHÓA HỌC</h2>
                 <div
-                    class="table-responsive"
+                class="table-responsive"
+            >
+                <table
+                    class="table table"
                 >
-                    <table
-                        class="table"
-                        id="table-1"
-                    >
-                        <thead>
-                            <tr>
-                                <th scope="col">STT</th>
-                                <th scope="col">Họ và tên</th>
-                                <th scope="col">Số Điện Thoại</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Địa chỉ</th>
-                                <th scope="col">Năm Sinh Học Viên</th>
-                                <th>Giáo Viên</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Họ và Tên</th>
+                            <th>Số Điện Thoại</th>
+                            <th>Email</th>
+                            <th>Địa chỉ</th>
+                            <th>Năm Sinh Học Viên</th>
+                            <th>Giáo viên</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                        </tbody>
-                    </table>
-                </div>
-                
+                    </tbody>
+                </table>
             </div>
-            <div class="row">
-                <p class="text-center">23703881_Lâm Gia Thịnh-DHKHMT19A</p>
-            </div>
+            
         </div>
+        <div class="row">
+            <div class="col-12 text-center" style="background-color: green; height:50px">23703881_Lâm Gia Thịnh - DHKHMT19A</div>
+        </div>
+        </div>
+
+        
     </div>
     <script>
         let stt = 1;
+        
         $('#formDangKy').submit(function(e) {
             e.preventDefault();
-            let hoTen = $('#hoTen').val().trim();
-            if (!/^([A-ZÀ-Ỹ]{1}[a-zà-ỹ]+)(\s[A-ZÀ-Ỹ]{1}[a-zà-ỹ]*)+$/.test(hoTen)) {
-                $('#loiDoHoTen').text('Có ít nhất 2 từ và ký tự đầu tiền của mỗi từ phải được viết hoa');
-                return;
-            } else {
-                $('#loiDoHoTen').text('');
-            }
-
-            let sdt = $('#SDT').val().trim();
-            if (!/^0[3-9][0-9]{2}\.[0-9]{3}\.[0-9]{3}$/.test(sdt)) {
-                $('#loiDoSDT').text('0XXX.XXX.XXX');
-                return;
-            } else {
-                $('#loiDoSDT').text('');
-            }
-
+            let hoTen = $("#hoTen").val().trim();
+            let soDienThoai = $('#soDienThoai').val().trim();
             let email = $('#email').val().trim();
-            if (!/^([0-9a-zA-Z_]{3,})@gmail\.com$/.test(email)) {
-                $('#loiDoEmail').text('tên trước @ ít nhất có 3 kí tự');
-                return ;
-            } else {
-                $('#loiDoEmail').text('');
-            }
-
             let diaChi = $('#diaChi').val().trim();
-            if (!/^[0-9a-zà-ỹA-ZÀ-Ỹ\/\.\s]+$/.test(diaChi)) {
-                $('#loiDoDiaChi').text('Nhập địa chỉ chỉ bao gồm các kí tự số và chữ và kí tự / .');
-                return ;
-            } else {
-                $('#loiDoDiaChi').text('');
-            }
-
-            let ngaySinh = $('#ngay').val();
-            let ns = new Date(ngaySinh);
-            let ngayHT = new Date();
-            let tuoi = ngayHT.getFullYear() - ns.getFullYear();
-            let du = ngayHT.getMonth() < ns.getMonth() ||
-                (ngayHT.getMonth() == ns.getMonth() && ngayHT.getDate() < ns.getDate());
-            if (tuoi > 12 || (tuoi == 12 && !du)) {
-                $('#loiDoNgay').text("");
-            } else {
-                $("#loiDoNgay").text("Ngày sinh hợp lệ khi tuổi từ 12 trở lên");
-                return;
-            }
-            let diaDiem = $('input[name="diaDiem"]:checked').val();
-            if (!diaDiem) {
-                $('#loiDoChon').text("Chưa nhập địa điểm");
-                return;
-            } else {
-                $('#loiDoChon').text('');
-            }
-
-            let row = `
-                <tr>
-                    <td>${stt++}</td>
-                    <td>${hoTen}</td>
-                    <td>${sdt}</td>
-                    <td>${email}</td>
-                    <td>${diaChi}</td>
-                    <td>${ns.getFullYear()}</td>
-                    <td>${diaDiem}</td>
-                </tr>
-            `
-            $('#table-1 tbody').append(row);
+            let ngay = new Date($('#ngay').val());
+            let giaoVien = $('input[name="giaoVien"]:checked').val();
             
-            $('#formDangKy')[0].reset();
-            $('#modalId').modal('hide');
+            if(!/^([A-ZÀ-Ỹ]{1}[a-zà-ỹ]+)(\s[A-ZÀ-Ỹ]{1}[a-zà-ỹ]*)+$/.test(hoTen)) {
+                $("#loiDoHoTen").text("Có ít nhất 2 từ và ký tự đầu tiên của mỗi từ được viết hoa.");
+                return;
+            } else {
+                $("#loiDoHoTen").text('');
+            }
+
+
+            if (isNaN(ngay)) {
+                $('#loiDoNgay').text('Vui lòng nhập ngày sinh hợp lệ');
+            return false;
+            }
+
+            if(!/^0[3-9]{1}[0-9]{2}\.[0-9]{3}\.[0-9]{3}$/.test(soDienThoai)) {
+                $('#loiDoSoDienThoai').text("0XXX.XXX.XXX trong đó x: ký tự số bắt đầu 09, 08, 07, 06, 05, 04, 03");
+                return;
+            } else {
+                $("#loiDoSoDienThoai").text('');
+            }
+
+            if(!/^[0-9A-Za-z_]{3,}@gmail\.com$/.test(email)) {
+                $('#loiDoEmail').text("nam_email@gmail.com, trong đó name_email ít nhất là 3 ký tự");
+                return;
+            } else {
+                $("#loiDoEmail").text('');
+            }
+            
+            if(!/^[0-9A-ZÀ-Ỹa-zà-ỹ\/\s\.]+$/.test(diaChi)) {
+                $('#loiDoDiaChi').text("Địa chỉ bao gồm các kí tự số và chữ và kí tự");
+                return;
+            } else {
+                $("#loiDoDiaChi").text('');
+            }
+
+            
+            let ngayHienTai = new Date();
+            if(ngayHienTai.getFullYear() - ngay.getFullYear() < 12) {
+                $('#loiDoNgay').text('Ngày sinh hợp lệ tuổi từ 12 trở lên');
+                return;
+            } else {
+                $('#loiDoNgay').text("");
+            }
+
+            dong = `
+                    <tr>
+            <td>${stt ++}</td>
+            <td>${hoTen}</td>
+            <td>${soDienThoai}</td>
+            <td>${email}</td>
+            <td>${diaChi}</td>
+            <td>${ngay.getFullYear()}</td>
+            <td>${giaoVien}</td>
+        </tr>
+            `
+            $("table tbody").append(dong);
+            $("#modalId").modal('hide');
+            $("#formDangKy")[0].reset();
         })
     </script>
 </body>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        nav, #cuoi {
+            background-color: aqua;
+        }
+        .loiDo {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../img/de5.png" alt="">
+        <nav>
+            <ul
+                class="nav justify-content-left  "
+            >
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" aria-current="page"
+                        >Trang chủ</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Giới thiệu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Chuyên khoa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">
+                        <button class="btn btn-success"
+                        data-bs-toggle="modal"
+                            data-bs-target="#modalId"
+                        >Đăng ký khám bệnh</button>
+                        
+                        <!-- Modal Body -->
+                        <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+                        <div
+                            class="modal fade"
+                            id="modalId"
+                            tabindex="-1"
+                            data-bs-backdrop="static"
+                            data-bs-keyboard="false"
+                            
+                            role="dialog"
+                            aria-labelledby="modalTitleId"
+                            aria-hidden="true"
+                        >
+                            <div
+                                class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md"
+                                role="document"
+                            >
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitleId">
+                                            THÔNG TIN BỆNH NHÂN ĐĂNG KÝ
+                                        </h5>
+                                        <button
+                                            type="button"
+                                            class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"
+                                        ></button>
+                                    </div>
+                                    <form action="" id="formDangKy">
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="d-flex gap-2">
+                                                    <input type="radio" name="noiTru" id="" value="Nội trú"><label for="">Nội trú</label>
+                                                    <input type="radio" name="noiTru" id="" value="Ngoại trú"><label for="">Ngoại trú</label>
+                                                </div>
+                                            
+                                            </div>
+
+                                            <div class="row">
+                                                <label for="">Mã thẻ bảo hiểm:</label>
+                                                <br>
+                                                <input type="text" id="maTheBaoHiem" class="form-control">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 loiDo" id="loiDoMaTheBaoHiem">(*)</div>
+                                            </div>
+
+                                            <div class="row">
+                                                <label for="">Họ tên:</label>
+                                                <br>
+                                                <input type="text" id="hoTen" class="form-control">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 loiDo" id="loiDoHoTen">(*)</div>
+                                            </div>
+
+                                            <div class="row">
+                                                <label for="">Tuổi:</label>
+                                                <br>
+                                                <input type="text" id="tuoi" class="form-control">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 loiDo" id="loiDoTuoi">(*)</div>
+                                            </div>
+
+                                            <div class="row">
+                                                <label for="">Số điện thoại:</label>
+                                                <br>
+                                                <input type="text" id="soDienThoai" class="form-control">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 loiDo" id="loiDoSoDienThoai" placeholder="Số điện thoại">(*)</div>
+                                            </div>
+
+                                            <div class="row">
+                                                <label for="">Địa chỉ:</label>
+                                                <br>
+                                                <input type="text" id="diaChi" class="form-control" placeholder="Địa chỉ">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 loiDo" id="loiDoDiaChi">(*)</div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="d-flex gap-3">
+                                                    <input type="checkbox" name="yeuCau" id="" class="yeuCau" value="Bác sĩ yêu cầu"><label for="">Bác sĩ yêu cầu</label> 
+                                                    <input type="checkbox" name="yeuCau" id="" class="yeuCau" value="Phòng dịch vụ cao cấp"><label for="">Phòng dịch vụ cao cấp</label>
+                                                    <input type="checkbox" name="yeuCau" id="" class="yeuCau" value="Trả kết quả tại nhà"><label for="">Trả kết quả tại nhà</label>
+                                                </div>
+                                              
+
+                                            </div>
+
+                                            <div class="row">
+                                                <label for="">Đối tượng khám bệnh:</label> <br>
+                                                <select name="" id="doiTuongKhamBenh">
+                                                    <option value="40%">Cán bộ</option>
+                                                    <option value="60%">Nhân viên</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="row">
+                                                <label for="">Tỉ lệ thanh toán:</label> <br>
+                                                <input type="text" name="" id="tiLeThanhToan" readonly>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 loiDo" id="loiDoTiLeThanhToan">(*)</div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <button type="submit" class="btn btn-primary">Đăng ký</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Optional: Place to the bottom of scripts -->
+                        <script>
+                            const myModal = new bootstrap.Modal(
+                                document.getElementById("modalId"),
+                                options,
+                            );
+                        </script>
+                        
+                    </a>
+                </li>
+            </ul>
+            
+        </nav>
+
+        <h1 class="text-center">DANH SÁCH KHÁM BỆNH TRỰC TUYẾN</h1>
+        <div
+            class="table-responsive"
+        >
+            <table
+                class="table table"
+            >
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Hình thức</th>
+                        <th>Mã thẻ Bảo hiểm</th>
+                        <th>Họ tên</th>
+                        <th>Tuổi</th>
+                        <th>Số điện thoại</th>
+                        <th>Địa chỉ</th>
+                        <th>Dịch vụ</th>
+                        <th>Tỉ lệ thanh toán</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="row" id="cuoi">
+            <div class="col-12">
+                <p>Mã Sinh viên: 23703881 Họ tên: Lâm Gia Thịnh</p>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+        let stt = 1;
+        $('#doiTuongKhamBenh').change(function() {
+            $('#tiLeThanhToan').val($(this).val());
+        })
+        $("#formDangKy").submit(function(e) {
+            e.preventDefault();
+            let hinhThuc = $('input[name="noiTru"]:checked').val();
+            let maTheBaoHiem = $("#maTheBaoHiem").val().trim();
+            let hoTen = $("#hoTen").val().trim();
+            let tuoi = $("#tuoi").val().trim();
+            let soDienThoai = $('#soDienThoai').val().trim();
+            let diaChi = $('#diaChi').val().trim();
+            let dichVu = $('input[name="yeuCau"]:checked').val();
+            let tiLeThanhToan = $("#tiLeThanhToan").val();
+
+            if(!/^(QN|CB)-[0-9]{4}$/.test(maTheBaoHiem)) {
+                $("#loiDoMaTheBaoHiem").text("Mã thẻ bảo hiểm  có định dạng như sau: QN-XXXX hoặc CB-XXXX");
+                return;
+            } else {
+                $("#loiDoMaTheBaoHiem").text("");
+            }
+
+            if(!/^([A-ZÀ-Ỹ]{1}[a-zà-ỹ]+)(\s[A-ZÀ-Ỹ]{1}[a-zà-ỹ]*)+$/.test(hoTen)) {
+                $("#loiDoHoTen").text("Ký tự đầu của mỗi từ là chữ hoa");
+                return;
+            } else {
+                $("#loiDoHoTen").text("");
+            }
+
+        
+            if (parseInt(tuoi) > 16) {
+                $("#loiDoTuoi").text('');
+                
+            } else {
+                $("#loiDoTuoi").text('Tuổi phải > 16');
+                return ;
+            }
+
+            if (!/^0[9|3|8|7]{1}[0-9]{8}$/.test(soDienThoai)) {
+                $("#loiDoSoDienThoai").text("Số điện thoại có định dạng là 10 con số trong đố luôn bắt đầu 09, 03, 08, 07");
+                return;
+            } else {
+                $("#loiDoSoDienThoai").text("");
+            }
+
+            if (diaChi === "") {
+                $("#loiDoDiaChi").text('Địa chỉ không được để trống');
+                return;
+            } else {
+                $("#loiDoDiaChi").text("");
+            }
+
+
+
+            dong = `
+        <tr>
+            <td>${stt ++}</td>
+            <td>${hinhThuc}</td>
+            <td>${maTheBaoHiem}</td>
+            <td>${hoTen}</td>
+            <td>${tuoi}</td>
+            <td>${soDienThoai}</td>
+            <td>${diaChi}</td>
+            <td>${dichVu}</td>
+            <td>${tiLeThanhToan}</td>
+        </tr>
+            `
+        $("table tbody").append(dong);
+        $("#modalId").modal('hide');
+        $("#formDangKy")[0].reset();
+
+        })
+    </script>
+</body>
+</html>

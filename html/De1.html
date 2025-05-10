@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="container">
-        <img src="../img/de1.png" alt="" class="img-fluid" widht="100%" height="50%">
+        <img src="../img/de1.png" alt="" class="img-fluid" width="100%">
         <nav>
             <ul
                 class="nav justify-content-left  "
@@ -26,10 +26,9 @@
                     >
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"
-                    data-bs-toggle="modal"
-                        data-bs-target="#modalId">Đăng ký</a>
-                    <!-- Modal -->
+                    <a class="nav-link" href="#"  data-bs-toggle="modal"
+                    data-bs-target="#modalId">Đăng ký</a>
+
                     <div
                         class="modal fade"
                         id="modalId"
@@ -55,80 +54,94 @@
                                     <div class="modal-body">
                                         <div class="container-fluid">
                                             <div class="row">
-                                                <div class="col-3"><label for="">Mã học viên:</label></div>
-                                                <div class="col-9"><input type="text" placeholder="123456789" id="maHocVien" class="form-control"></div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-12 loiDo" id="loiDoMaHocVien"></div>
-                                            </div>
-    
-                                            <div class="row">
-                                                <div class="col-3"><label for="">Họ tên:</label></div>
-                                                <div class="col-9"><input type="text" placeholder="Tran Thu Trang" id="hoTen" class="form-control"></div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-12 loiDo" id="loiDoHoTen"></div>
-                                            </div>
-    
-                                            <div class="row">
-                                                <div class="col-3"><label for="">Email:</label></div>
-                                                <div class="col-9"><input type="email" placeholder="trangtran@iuh.edu.vn" id="email" class="form-control"></div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-12 loiDo" id="loiDoEmail"></div>
-                                            </div>
-    
-                                            <div class="row">
-                                                <div class="col-3"><label for="">Dịch vụ:</label></div>
-                                                <div class="col-9">
-                                                    <select name="dichVu" id="dichVu" class="form-control">
-                                                        <option value="5000">Bơi</option>
-                                                        <option value="6000">Nhảy</option>
-                                                    </select>
+                                                <div class="col-3">
+                                                    <label for="">Mã học viên:</label>
                                                 </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-12 loiDo" id="loiDoDichVu"></div>
-                                            </div>
-    
-                                            <div class="row">
-                                                <div class="col-3"><label for="">Giá Tiền:</label></div>
-                                                <div class="col-9"><input type="text"  id="giaTien" class="form-control" readonly></div>
-                                            </div>
-                                            
-                                            <div class="row">
-                                                <div class="col-3"><label for="">Đồ dùng:</label></div>
                                                 <div class="col-9">
-                                                    <input type="radio" name="" id="" class="doDung" value="20000"> <label for="">Áo quần bơi</label>
-                                                    <br>
-                                                    <input type="radio" name="" id="" class="doDung" value="30000"> <label for="">Phao</label>
-                                                    <br>
-                                                    <input type="radio" name="" id="" class="doDung" value="50000"> <label for="">Kính bơi</label>
+                                                    <input type="text" placeholder="123456789" id="maHocVien" class="form-control">
+                                                    <p class="loiDo" id="loiDoMaHocVien">*</p>
                                                 </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-12 loiDo" id="loiDoDoDung"></div>
-                                            </div>
-    
-                                            <div class="row">
-                                                <div class="col-3"><label for="">Tiền đồ dùng:</label></div>
-                                                <div class="col-9"><input type="text"  id="tienDoDung" class="form-control" readonly></div>
-                                            </div>
-    
-                                            <div class="row">
-                                                <div class="col-3"><label for="">Tổng tiền:</label></div>
-                                                <div class="col-9"><input type="text"  id="tongTien" class="form-control" readonly></div>
                                             </div>
 
                                             <div class="row">
-                                                <div class="col-6">
-                                                    <button type="submit" class="btn btn-success form-control">Thanh toán</button>
+                                                <div class="col-3">
+                                                    <label for="">Họ tên:</label>
                                                 </div>
-                                                <div class="col-6">
-                                                    <button type="reset" class="btn btn-danger form-control">Hủy</button>
+                                                <div class="col-9">
+                                                    <input type="text" placeholder="Tran Thu Trang" id="hoTen" class="form-control">
+                                                    <p class="loiDo" id="loiDoHoTen">*</p>
                                                 </div>
                                             </div>
-    
+
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <label for="">Email:</label>
+                                                </div>
+                                                <div class="col-9">
+                                                    <input type="email" placeholder="trangtran@iuh.edu.vn" id="email" class="form-control">
+                                                    <p class="loiDo" id="loiDoEmail">*</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <label for="">Dịch vụ:</label>
+                                                </div>
+                                                <div class="col-9">
+                                                    <select name="dichVu" id="dichVu" class="form-control">
+                                                        <option value="50000">Bơi</option>
+                                                        <option value="60000">Nhảy</option>
+                                                    </select>
+                                              </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <label for="">Giá tiền:</label>
+                                                </div>
+                                                <div class="col-9">
+                                                    <input type="text" name="" id="giaTien" class="form-control" readonly>
+                                               </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <label for="">Đồ dùng</label>
+                                                </div>
+                                                <div class="col-9">
+                                                    <input type="checkbox" name="" id="" class="doDung" value="1000"> <label for="">Áo quần bơi</label>
+                                                    <br>
+                                                    <input type="checkbox" name="" id="" class="doDung" value="2000"> <label for="">Phao</label> 
+                                                    <br>
+                                                    <input type="checkbox" name="" id="" class="doDung" value="3000"> <label for="">Kính bơi</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <label for="">Tiền đồ dùng:</label>
+                                                </div>
+                                                <div class="col-9">
+                                                    <input type="text" name="" placeholder="0" id="tienDoDung" readonly class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <label for="">Tổng tiền:</label>
+                                                </div>
+                                                <div class="col-9">
+                                                    <input type="text" name="" id="tongTien" readonly class="form-control">
+                        
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6">                                            <button type="submit" class="btn btn-success form-control">Thanh toán</button>
+                                                </div>
+                                                <div class="col-6">                                            <button type="reset" class="btn btn-danger form-control">Hủy</button>
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </form>
@@ -183,19 +196,7 @@
                 </tbody>
             </table>
         </div>
-        
-        <div class="row">
-            <div class="col-4">
-                Mã sinh viên: 23703881
-            </div>
-            <div class="col-4">
-                Họ tên: Lâm Gia Thịnh
-            </div>
-            <div class="col-4">
-                Phòng thi: H2.02
-            </div>
-        </div>
-      
+
     </div>
     <script>
         let stt = 1;
@@ -212,17 +213,18 @@
                 tien += parseInt($(this).val());
             })
             $('#tienDoDung').val(tien);
-            let tienDV = parseInt($('#giaTien').val());
+            let tienDV = parseInt($('#giaTien').val()) || 0;
             $('#tongTien').val(tienDV + tien);
         }
-        $("#formDangKy").submit(function(e) {
+
+        $('#formDangKy').submit(function(e) {
             e.preventDefault();
-            let maHocVien = $("#maHocVien").val().trim();
+            let maHocVien = $('#maHocVien').val().trim();
             let hoTen = $('#hoTen').val().trim();
-            let email = $("#email").val().trim();
-            let tienDichVu = $('#giaTien').val();
-            let tienDoDung = $('#tienDoDung').val();
-            let tongTien = $('#tongTien').val();
+            let email = $('#email').val().trim();
+            let tienDichVu = parseFloat($('#giaTien').val());
+            let tienDoDung = parseFloat($('#tienDoDung').val());
+            let tongTien = parseFloat($('#tongTien').val());
 
             if (!/^[0-9]{2}-[0-9]{8}$/.test(maHocVien)) {
                 $('#loiDoMaHocVien').text('xx-yyyyyyyy');
@@ -232,14 +234,21 @@
             }
 
             if (!/^([A-ZÀ-Ỹ]{1}[a-zà-ỹ]+)(\s[A-ZÀ-Ỹ]{1}[a-zà-ỹ]*)+$/.test(hoTen)) {
-                $('#loiDoHoTen').text('Họ tên tối thiểu 2 từ và hoa đầu từ');
+                $("#loiDoHoTen").text("Họ tên tối thiểu 2 từ và từ theo mẫu: Nguyen Van Anh");
                 return;
             } else {
-                $('#loiDoHoTen').text('');
+                $("#loiDoHoTen").text('');
             }
-
-            dong = `
-              <tr>
+            
+            if (!/^([A-Za-z_0-9])+@iuh\.edu\.vn$/.test(email)) {
+                $('#loiDoEmail').text("Email theo mẫu có phần đuôi: @iuh.edu.vn");
+                return;
+            } else {
+                $('#loiDoEmail').text("");
+            }
+            
+            let dong = `
+        <tr>
             <td>${stt ++}</td>
             <td>${maHocVien}</td>
             <td>${hoTen}</td>
@@ -249,7 +258,7 @@
             <td>${tongTien}</td>
         </tr>
             `
-            $("table tbody").append(dong);
+            $('table tbody').append(dong);
             $('#modalId').modal('hide');
             $('#formDangKy')[0].reset();
         })

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        .loiDo {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../img/de7.png" alt="" width="100%" class="img-fluid">
+        <nav>
+            <ul
+                class="nav justify-content-left"
+            >
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" aria-current="page"
+                        >Trang chủ</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"
+                    data-bs-toggle="modal"
+                        data-bs-target="#modalId"
+                    >Đăng ký</a>
+
+                    <!-- Modal -->
+                    <div
+                        class="modal fade"
+                        id="modalId"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-labelledby="modalTitleId"
+                        aria-hidden="true"
+                    >
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalTitleId">
+                                        THÔNG TIN CÁ NHÂN 
+                                    </h5>
+                                    <button
+                                        type="button"
+                                        class="btn-close"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                    ></button>
+                                </div>
+                                <form action="" id="formDangKy">
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-3">Họ tên</div>
+                                            <div class="col-9">
+                                                <input type="text" id="hoTen" placeholder="Lâm Gia Thịnh" class="form-control"> 
+                                                <p class="loiDo" id="loiDoHoTen"></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-3">SCMND cũ</div>
+                                            <div class="col-9">
+                                                <input type="text" id="SCMNDCu" placeholder="123456789" class="form-control"> 
+                                                <p class="loiDo" id="loiDoSCMNDCu"></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-3">Quê quán</div>
+                                            <div class="col-9">
+                                                <input type="text" id="queQuan" placeholder="BÌNH ĐỊNH" class="form-control"> 
+                                                <p class="loiDo" id="loiDoQueQuan"></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-3">Email</div>
+                                            <div class="col-9">
+                                                <input type="email" id="email" placeholder="lam@iuh.edu.vn" class="form-control"> 
+                                                <p class="loiDo" id="loiDoEmail"></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-3">Số điện thoại</div>
+                                            <div class="col-9">
+                                                <input type="text" id="soDienThoai" placeholder="012-123-1234" class="form-control"> 
+                                                <p class="loiDo" id="loiDoSoDienThoai"></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-3">Ảnh đại diện</div>
+                                            <div class="col-9">
+                                                <input type="file" id="anhDaiDien" class="form-control"> 
+                                                <p class="loiDo" id="loiDoAnhDaiDien"></p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary" >Lưu</button>
+                                </div>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        var modalId = document.getElementById('modalId');
+                    
+                        modalId.addEventListener('show.bs.modal', function (event) {
+                              // Button that triggered the modal
+                              let button = event.relatedTarget;
+                              // Extract info from data-bs-* attributes
+                              let recipient = button.getAttribute('data-bs-whatever');
+                    
+                            // Use above variables to manipulate the DOM
+                        });
+                    </script>
+                    
+                </li>
+                
+            </ul>
+            
+        </nav>
+        <div class="row">
+            <div class="col-12">
+                <h4 class="text-center">DANH SÁCH ĐĂNG KÝ LÀM CĂN CƯỚC SINH VIÊN TRƯỜNG DHCN THÀNH PHỐ HỒ CHÍ MINH</h4>
+
+            </div>
+        </div>
+
+        <div
+            class="table-responsive"
+        >
+            <table
+                class="table table-primary"
+            >
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Họ tên</th>
+                        <th>SCMND cũ</th>
+                        <th>Quê quán</th>
+                        <th>Email</th>
+                        <th>Điện thoại</th>
+                        <th>Ảnh đại diện</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        
+
+    </div>
+    <script>
+        let stt = 1;
+        $('#formDangKy').submit(function(e) {
+            e.preventDefault();
+            let hoTen = $('#hoTen').val().trim();
+            let scmndCu = $('#SCMNDCu').val().trim();
+            let queQuan = $('#queQuan').val().trim();
+            let email = $('#email').val().trim();
+            let soDienThoai = $('#soDienThoai').val().trim();
+            let anhDaiDien = $('#anhDaiDien').val();
+            
+            if (!/^([A-ZÀ-Ỹ]{1}[a-zà-ỹ]+)(\s[A-ZÀ-Ỹ]{1}[a-zà-ỹ]*)+$/.test(hoTen)) {
+                $('#loiDoHoTen').text("Không đúng định dạng: Từ đầu không dùng số, chữ cái đầu viết hoa");
+                return;
+            } else {
+                $("#loiDoHoTen").text('');
+
+            }
+
+            if (!/^[0-9]{9}$/.test(scmndCu)) {
+                $('#loiDoSCMNDCu').text("Chỉ dùng 9 chữ số");
+                return ;
+            } else {
+                $("#loiDoSCMNDCu").text('');
+            }
+
+
+            if (!/^([A-ZÀ-Ỹ]+)(\s[A-ZÀ-Ỹ]+)*$/.test(queQuan)) {
+                $('#loiDoQueQuan').text('Chỉ dùng chữ viết hoa');
+                return;
+            } else {
+                $('#loiDoQueQuan').text("");
+            }
+
+
+            if (!/^([A-Za-z_0-9])+@iuh\.edu\.vn$/.test(email)) {
+                $('#loiDoEmail').text('Có dạng xxxx@iuh.edu.vn');
+                return;
+            } else {
+                $('#loiDoEmail').text('');
+            }
+
+            if (!/^0[0-9]{2}-[0-9]{3}-[0-9]{4}$/.test(soDienThoai)) {
+                $('#loiDoSoDienThoai').text("Có dạng 0xx-xxx-xxxx");
+                return;
+            } else {
+                $('#loiDoSoDienThoai').text('');
+            }
+
+            if (!/\.(jpg|png|gif)$/i.test(anhDaiDien)) {
+                $('#loiDoAnhDaiDien').text("Phải nhập định dạng jpg, png, gif");
+                return;
+            } else {
+                $('#loiDoAnhDaiDien').text('');
+            }
+            
+
+            let anh = $('#anhDaiDien')[0].files[0];
+            let image = URL.createObjectURL(anh);
+
+            let dong = `
+        <tr>
+            <td>${stt ++}</td>
+            <td>${hoTen}</td>
+            <td>${scmndCu}</td>
+            <td>${queQuan}</td>
+            <td>${email}</td>
+            <td>${soDienThoai}</td>
+            <td><img src="${image}" width="100px"></td>
+        </tr>
+            `
+            $('table tbody').append(dong);
+        $('#modalId').modal('hide');
+        $('#formDangKy')[0].reset();
+        })
+
+    </script>
+</body>
+</html>

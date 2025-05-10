@@ -11,14 +11,12 @@
         .loiDo {
             color: red;
         }
-        #nut {
-            width: 100%;
-        }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <img class="img-fluid" src="../img/de3.png" alt="" width="100%">
+        <img src="../img/de3.png" alt="" class="img-fluid" width="100%">
         <nav>
             <ul
                 class="nav justify-content-left  "
@@ -34,7 +32,6 @@
                         data-bs-target="#modalId"
                     >Mở tour mới</a>
 
-                    <!-- Modal -->
                     <div
                         class="modal fade"
                         id="modalId"
@@ -60,7 +57,9 @@
                                     <div class="modal-body">
                                         <div class="container-fluid">
                                             <div class="row">
-                                                <div class="col-3"><label for="">Mã tour</label></div>
+                                                <div class="col-3">
+                                                    <label for="">Mã tour</label>
+                                                </div>
                                                 <div class="col-9">
                                                     <input type="text" id="maTour" placeholder="HNI-DNG-08-2018" class="form-control">
                                                     <p class="loiDo" id="loiDoMaTour">*</p>
@@ -68,54 +67,62 @@
                                             </div>
 
                                             <div class="row">
-                                                <div class="col-3"><label for="">Hành trình</label></div>
+                                                <div class="col-3">
+                                                    <label for="">Hành trình</label>
+                                                </div>
                                                 <div class="col-9">
-                                                    <input type="text" id="hanhTrinh" placeholder="Hà Nội" class="form-control">
+                                                    <input type="text" id="hanhTrinh" placeholder="Hà Nội - Huế - Đà Nẵng 5 ngày 4 đêm" class="form-control">
                                                     <p class="loiDo" id="loiDoHanhTrinh">*</p>
                                                 </div>
                                             </div>
 
                                             <div class="row">
-                                                <div class="col-3"><label for="">Ngày khởi hành</label></div>
+                                                <div class="col-3">
+                                                    <label for="">Ngày khởi hành</label>
+                                                </div>
                                                 <div class="col-9">
-                                                    <input type="date" id="ngayKhoiHanh" class="form-control">
+                                                    <input type="date" id="ngayKhoiHanh"  class="form-control">
                                                     <p class="loiDo" id="loiDoNgayKhoiHanh">*</p>
                                                 </div>
                                             </div>
 
                                             <div class="row">
-                                                <div class="col-3"><label for="">Thời gian</label></div>
+                                                <div class="col-3">
+                                                    <label for="">Thời gian</label>
+                                                </div>
                                                 <div class="col-9">
                                                     <input type="text" id="thoiGian" placeholder="5 ngày 4 đêm" class="form-control">
+                                                    <p class="loiDo" id="loiDoThoiGian">*</p>
                                                 </div>
                                             </div>
 
                                             <div class="row">
-                                                <div class="col-3"><label for="">Giá Tour</label></div>
+                                                <div class="col-3">
+                                                    <label for="">Giá Tour</label>
+                                                </div>
                                                 <div class="col-9">
-                                                    <input type="text" id="giaTour" placeholder="100000" class="form-control">
+                                                    <input type="text" id="giaTour" placeholder="10000" class="form-control">
                                                     <p class="loiDo" id="loiDoGiaTour">*</p>
                                                 </div>
                                             </div>
 
                                             <div class="row">
-                                                <div class="col-3"><label for="">Ảnh đại diện</label></div>
+                                                <div class="col-3">
+                                                    <label for="">Ảnh đại diện</label>
+                                                </div>
                                                 <div class="col-9">
                                                     <input type="file" id="anhDaiDien" class="form-control">
                                                     <p class="loiDo" id="loiDoAnhDaiDien">*</p>
                                                 </div>
                                             </div>
 
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <button type="submit" class="btn btn-success" id="nut">Lưu</button>
-                                                </div>
-                                            </div>
-
                                         </div>
                                     </div>
-                                </form>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="form-control btn btn-success">Lưu</button>
 
+                                    </div>
+                                </form>
 
                             </div>
                         </div>
@@ -135,39 +142,33 @@
                     </script>
                     
                 </li>
-                
+               
             </ul>
             
         </nav>
-        <div class="row">
-            <div class="col-12">
-                <h4 class="text-center">DANH SÁCH TOUR - DU LỊCH VIỆT</h4>
-                <div
-                    class="table-responsive"
-                >
-                    <table
-                        class="table table-light"
-                    >
-                        <thead>
-                            <tr>
-                                <th>STT</th>
-                                <th>Mã Tour</th>
-                                <th>Hành trình</th>
-                                <th>Ngày khởi hành</th>
-                                <th>Thời gian</th>
-                                <th>Giá tour</th>
-                                <th>Ảnh đại diện</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+        <h4 class="text-center">DANH SACH TOUR - DU LỊCH VIỆT</h4>
+        <div
+            class="table-responsive"
+        >
+            <table
+                class="table table-primary"
+            >
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã Tour</th>
+                        <th>Hành trình</th>
+                        <th>Ngày khởi hành</th>
+                        <th>Thời gian</th>
+                        <th>Giá tour</th>
+                        <th>Ảnh đại diện</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-                        </tbody>
-                    </table>
-                </div>
-                
-            </div>
+                </tbody>
+            </table>
         </div>
-
 
     </div>
     <script>
@@ -178,57 +179,58 @@
             let hanhTrinh = $('#hanhTrinh').val().trim();
             let ngayKhoiHanh = $('#ngayKhoiHanh').val();
             let thoiGian = $('#thoiGian').val().trim();
-            let giaTour = parseFloat($('#giaTour').val().trim());
+            let giaTour = $('#giaTour').val().trim();
             let anhDaiDien = $('#anhDaiDien').val();
 
-
-            if (!/^[A-Z]{3}-[A-Z]{3}-((0[1-9])|(1[1-2]))-[0-9]{4}$/.test(maTour)) {
-                $('#loiDoMaTour').text('XXX-XXX-mm-yyyy');
+            if (!/^[A-ZÀ-Ỹ]{3}-[A-ZÀ-Ỹ]{3}-(0[0-9])|(1[1-2])-[0-9]{4}$/.test(maTour)) {
+                $('#loiDoMaTour').text("XXX-XXX-mm-yyyy với x là ký tự hoa, mm là tháng, yyyy là năm khởi hành");
                 return;
             } else {
                 $('#loiDoMaTour').text('');
             }
 
-            let ngayHT = new Date();
             let ngayKH = new Date(ngayKhoiHanh);
+            let ngayHT = new Date();
 
-            let chenhlech =(ngayKH.getTime() - ngayHT.getTime()) / (1000 * 60 * 60 * 24);
-            if (chenhlech >= 30) {
+            ngayKH.setHours(0, 0, 0, 0);
+            ngayHT.setHours(0, 0, 0, 0);
+            let chenhLech = (ngayKH - ngayHT) / (1000 * 60 * 60 * 24);
+            if (chenhLech >= 30) {
                 $('#loiDoNgayKhoiHanh').text('');
             } else {
                 $('#loiDoNgayKhoiHanh').text('Ngày khởi hành phải sau ngày hiện tại 30 ngày');
                 return;
-
             }
-
-            if (giaTour > 0) {
-                $('#loiDoGiaTour').text("");
+            
+            if(giaTour > 0) {
+                $('#loiDoGiaTour').text('');
             } else {
-                $('#loiDoGiaTour').text("Giá tour > 0");
+                $('#loiDoGiaTour').text('Giá Tour là số > 0');
                 return;
             }
 
             if (!/\.(jpg|gif|png)$/i.test(anhDaiDien)) {
-                $("#loiDoAnhDaiDien").text("Phải đúng định dạng jpg, gif, png");
+                $("#loiDoAnhDaiDien").text('phải đúng loại hình thuộc 1 trong các đuôi kiểu jpg, gif, png');
                 return;
             } else {
                 $("#loiDoAnhDaiDien").text('');
             }
             let anh = $('#anhDaiDien')[0].files[0];
-            let image = anh ? URL.createObjectURL(anh) : "";
+            let image = URL.createObjectURL(anh);
+
             let dong = `
                     <tr>
-            <td>${stt++}</td>
+            <td>${stt ++}</td>
             <td>${maTour}</td>
             <td>${hanhTrinh}</td>
             <td>${ngayKhoiHanh}</td>
             <td>${thoiGian}</td>
             <td>${giaTour}</td>
-            <td><img src="${image}" width="100px"></td>
+            <td><img src="${image}" width="70px"></td>
         </tr>
             `
             $('table tbody').append(dong);
-            $('#modalId').modal('hide');
+            $("#modalId").modal('hide');
             $('#formDangKy')[0].reset();
         })
     </script>

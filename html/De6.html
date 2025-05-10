@@ -226,8 +226,10 @@
                 $("#loiDoNgayDat").text('');
             }
 
-            if (!/^(?=.*\W)[A-ZÀ-Ỹa-zà-ỹ0-9\W]{3,}@iuh\.edu\.vn$/.test(email)) {
-            $('#loiDoEmail').text("name_email ít nhất là 3 ký tự trong đó có kí tự chữ, ký tự số, ít nhất 1 ký tự đặc biệt.");
+
+            const tenPhiaTruoc = email.split('@')[0];
+            if (!/^(?=.*[A-ZÀ-Ỹa-zà-ỹ])(?=.*[0-9])(?=.*\W)[A-ZÀ-Ỹa-zà-ỹ0-9\W]{3,}$/.test(tenPhiaTruoc) || !/@iuh\.edu\.vn$/.test(email)) {
+            $('#loiDoEmail').text("name_email ít nhất là 3 ký tự trong đó có kí tự chữ, ký tự số, ít nhất 1 ký tự đặc biệt. đuổi phải có @iuh.edu.vn");
                 return;
             } else {
                 $('#loiDoEmail').text('');

@@ -14,8 +14,8 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="../img/de6.png" alt="" class="img-fluid" width="100%" height="auto">
+    <div class="container border border-primary">
+        <img src="../img/de6.png" alt="" class="img-fluid" width="100%">
         <nav>
             <ul
                 class="nav justify-content-left  "
@@ -32,23 +32,16 @@
                     >ĐẶT MUA HOA</a>
 
                     
-                    <!-- Modal Body -->
-                    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+                    <!-- Modal -->
                     <div
                         class="modal fade"
                         id="modalId"
                         tabindex="-1"
-                        data-bs-backdrop="static"
-                        data-bs-keyboard="false"
-                        
                         role="dialog"
                         aria-labelledby="modalTitleId"
                         aria-hidden="true"
                     >
-                        <div
-                            class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md"
-                            role="document"
-                        >
+                        <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="modalTitleId">
@@ -61,46 +54,55 @@
                                         aria-label="Close"
                                     ></button>
                                 </div>
-                                <form action="" id="formDangKy">
-
-                                    <div class="modal-body">
+                            <form action="" id="formDangKy">
+                                <div class="modal-body">
+                                    <div class="container-fluid">
                                         <div class="row">
-                                            <div class="col-3"><label for="">Họ và tên</label></div>
-                                            <div class="col-9"><input type="text" id="hoVaTen" class="form-control" placeholder="Nguyen Luong"></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12 loiDo" id="loiDoHoVaTen"></div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-3"><label for="">Số Điện Thoại</label></div>
-                                            <div class="col-9"><input type="text" id="soDienThoai" class="form-control" placeholder="0394349348"></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12 loiDo" id="loiDoSoDienThoai"></div>
-                                        </div>
-
-
-                                        <div class="row">
-                                            <div class="col-3"><label for="">Ngày Đặt</label></div>
-                                            <div class="col-9"><input type="date" id="ngayDat" class="form-control" ></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12 loiDo" id="loiDoNgayDat"></div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-3"><label for="">Email Của Bạn</label></div>
-                                            <div class="col-9"><input type="email" id="email" class="form-control" placeholder="NguyenLong@gmail.com"></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12 loiDo" id="loiDoEmail"></div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-3"><label for="">Chọn Loại Hoa</label></div>
+                                            <div class="col-3">
+                                                <label for="">Họ Và Tên</label>
+                                            </div>
                                             <div class="col-9">
-                                                <select name="chonLoaiHoa" id="chonLoaiHoa">
+                                                <input type="text" id="hoVaTen" placeholder="Nguyen Luong" class="form-control">
+                                                <p class="loiDo" id="loiDoHoVaTen">*</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <label for="">Số Điện Thoại</label>
+                                            </div>
+                                            <div class="col-9">
+                                                <input type="text" id="soDienThoai" placeholder="0903.128.359" class="form-control">
+                                                <p class="loiDo" id="loiDoSoDienThoai">*</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <label for="">Ngày Đặt</label>
+                                            </div>
+                                            <div class="col-9">
+                                                <input type="date" id="ngayDat" placeholder="08/11/2023" class="form-control">
+                                                <p class="loiDo" id="loiDoNgayDat">*</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <label for="">Email Của Bạn</label>
+                                            </div>
+                                            <div class="col-9">
+                                                <input type="email" id="email" placeholder="nguyenluong1603@iuh.edu.vn" class="form-control">
+                                                <p class="loiDo" id="loiDoEmail">*</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <label for="">Chọn Loại Hoa</label>
+                                            </div>
+                                            <div class="col-9">
+                                                <select name="chonLoaiHoa" id="">
                                                     <option value="Hoa Hồng Nhung">Hoa Hồng Nhung</option>
                                                     <option value="Hoa Hồng Vàng">Hoa Hồng Vàng</option>
                                                     <option value="Hoa Hồng Trắng">Hoa Hồng Trắng</option>
@@ -109,58 +111,56 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-12 loiDo" id="loiDoChonLoaiHoa"></div>
-                                        </div>
 
                                         <div class="row">
-                                            <div class="col-3"><label for="">Loại Thanh Toán</label></div>
-                                            <div class="col-9 d-flex gap-2">
+                                            <div class="col-3">
+                                                <label for="">Loại Thanh Toán</label>
+                                            </div>
+                                            <div class="col-9">
                                                 <input type="radio" name="loaiThanhToan" id="" value="Tiền Mặt"> <label for="">Tiền Mặt</label>
-                                                <input type="radio" name="loaiThanhToan" id="" value="Chuyển Khoản"> <label for="">Chuyển Khoản</label>
-
+                                                <input type="radio" name="loaiThanhToan" value="Chuyển Khoản"> <label for="">Chuyển Khoản</label>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-12 loiDo" id="loiDoLoaiThanhToan"></div>
-                                        </div>
+
                                     </div>
-
-                                    <div class="modal-footer">
-                                        <button type="submit" class="btn btn-success">Đặt Hàng</button>
-                                    </div>
-
-                                </form>
-
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-success form-control" >Đặt Hàng</button>
+                                </div>
+                            </form>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Optional: Place to the bottom of scripts -->
                     <script>
-                        const myModal = new bootstrap.Modal(
-                            document.getElementById("modalId"),
-                            options,
-                        );
+                        var modalId = document.getElementById('modalId');
+                    
+                        modalId.addEventListener('show.bs.modal', function (event) {
+                              // Button that triggered the modal
+                              let button = event.relatedTarget;
+                              // Extract info from data-bs-* attributes
+                              let recipient = button.getAttribute('data-bs-whatever');
+                    
+                            // Use above variables to manipulate the DOM
+                        });
                     </script>
                     
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">CÂY VĂN PHÒNG</a>
+                    <a class="nav-link " href="#">CÂY XANH VĂN PHÒNG</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">TIN TỨC</a>
+                    <a class="nav-link " href="#">DANH SÁCH THÔNG TIN ĐẶT HÀNG NHANH</a>
                 </li>
             </ul>
             
         </nav>
-
         <div class="row">
             <div class="col-2">
                 <img src="../img/de6-2.png" alt="" class="img-fluid">
             </div>
             <div class="col-10">
-                <h3 class="text-center">DANH SÁCH THÔNG TIN ĐẶT HÀNG NHANH</h3>
+                <h1 class="text-center">DANH SÁCH THÔNG TIN ĐẶT HÀNG NHANH</h1>
                 <div
                     class="table-responsive"
                 >
@@ -182,82 +182,84 @@
 
                         </tbody>
                     </table>
-                    <p class="text-center">MSSV: 23703881 Lớp: DHKHMT19A  Họ và tên: Lâm Gia Thịnh</p>
                 </div>
-               
+                
             </div>
         </div>
+        <div class="row">
+            <div class="col-12">
+                <p class="text-center">MSSV: 23703881 Lớp: DHKHMT19A Họ và tên: Lâm Gia Thịnh</p>
+            </div>
+        </div>
+
     </div>
     <script>
         let stt = 1;
-        
-        $("#formDangKy").submit(function(e) {
+        $('#formDangKy').submit(function(e) {
             e.preventDefault();
-            let hoVaTen = $("#hoVaTen").val().trim();
-            let soDienThoai = $("#soDienThoai").val().trim();
-            let ngayDat = $("#ngayDat").val();
+            let hoVaTen = $('#hoVaTen').val().trim();
+            let soDienThoai = $('#soDienThoai').val().trim();
+            let ngayDat = $('#ngayDat').val();
             let email = $('#email').val().trim();
             let loaiHoa = $('select[name="chonLoaiHoa"]').val();
             let loaiThanhToan = $('input[name="loaiThanhToan"]:checked').val();
 
-            if (!/^([A-ZÀ-Ỹ]{1}[a-z à-ỹ]+)(\s[A-ZÀ-Ỹ]{1}[a-z à-ỹ]*)+$/.test(hoVaTen)) {
-                $("#loiDoHoVaTen").text("Có ít nhất 2 từ và ký tự đầu tiên của mỗi từ phải được viết hoa.");
-                return;
-            } else {
+            if(/^([A-ZÀ-Ỹ]{1}[a-zà-ỹ]+)(\s[A-ZÀ-Ỹ]{1}[a-zà-ỹ]*)+$/.test(hoVaTen)) {
                 $("#loiDoHoVaTen").text('');
+            } else {
+                $("#loiDoHoVaTen").text('Có ít nhất 2 từ và ký tự đầu tiên của mỗi từ phải được viết hoa.');
+                return;
             }
 
-            if (!/^0[0-9]{3}\.[0-9]{3}\.[0-9]{3}$/.test(soDienThoai)) {
-                $('#loiDoSoDienThoai').text("Số điện thoại theo mẫu: 0xxx.xxx.xxx");
-                return;
+            if (/^0[0-9]{3}\.[0-9]{3}\.[0-9]{3}$/.test(soDienThoai)) {
+                $('#loiDoSoDienThoai').text('');
             } else {
-                $('#loiDoSoDienThoai').text("");
+                $('#loiDoSoDienThoai').text('0XXX.XXX.XXX trong đó X: là ký tự số.');
+                return;
             }
 
-            let ngay = new Date(ngayDat);
-            let ngayHienTai = new Date();
-            let dieuKien = (ngayHienTai.getFullYear() > ngay.getFullYear()) || 
-                            ((ngayHienTai.getFullYear() == ngay.getFullYear()) && (ngayHienTai.getMonth() > ngay.getMonth())) || 
-                            ((ngayHienTai.getFullYear() == ngay.getFullYear()) && (ngayHienTai.getMonth() == ngay.getMonth()) && (ngayHienTai.getDate() > ngayDat.getDate()));
-            if (dieuKien) {
-                $("#loiDoNgayDat").text("Ngày đặt sau ngày hiện tại");
-                return;
-            } else {
+            let ngayHT = new Date();
+            let ngayD = new Date(ngayDat);
+            ngayHT.setHours(0, 0, 0, 0);
+            ngayD.setHours(0, 0, 0, 0);
+            let chenhLech = (ngayD - ngayHT) / (1000 * 60 * 60 * 24);
+            if (chenhLech > 0) {
                 $("#loiDoNgayDat").text('');
+            } else {
+                $("#loiDoNgayDat").text('Ngày đặt sau ngày hiện tại');
+                return;
             }
 
-
-            const tenPhiaTruoc = email.split('@')[0];
-            if (!/^(?=.*[A-ZÀ-Ỹa-zà-ỹ])(?=.*[0-9])(?=.*\W)[A-ZÀ-Ỹa-zà-ỹ0-9\W]{3,}$/.test(tenPhiaTruoc) || !/@iuh\.edu\.vn$/.test(email)) {
-            $('#loiDoEmail').text("name_email ít nhất là 3 ký tự trong đó có kí tự chữ, ký tự số, ít nhất 1 ký tự đặc biệt. đuổi phải có @iuh.edu.vn");
-                return;
-            } else {
+            let tenTruoc = email.split('@')[0];
+            if (/^(?=.*\W)[0-9A-Za-z\W]{3,}$/.test(tenTruoc) && /@iuh\.edu\.vn$/.test(email)) {
                 $('#loiDoEmail').text('');
+            } else {
+                $('#loiDoEmail').text('name_email@iuh.edu.vn, trong đó name_email ít nhất là 3 ký tự trong đó có kí tự chữ, ký tự số, ít nhất 1 ký tự đặc biệt.');
+                return;
+
             }
 
             if (!loaiThanhToan) {
-                $("#loiDoLoaiThanhToan").text("Chưa chọn loại thanh toán");
+                alert('Chọn loại thanh toán');
                 return;
-            } else {
-                $('#loiDoLoaiThanhToan').text("");
             }
 
-
-            dong = `
-                <tr>
-                    <td>${stt ++}</td>
-                    <td>${hoVaTen}</td>
-                    <td>${soDienThoai}</td>
-                    <td>${ngayDat}</td>
-                    <td>${email}</td>
-                    <td>${loaiHoa}</td>
-                    <td>${loaiThanhToan}</td>
-                </tr>
+            let dong = `
+        <tr>
+            <td>${stt ++}</td>
+            <td>${hoVaTen}</td>
+            <td>${soDienThoai}</td>
+            <td>${ngayDat}</td>
+            <td>${email}</td>
+            <td>${loaiHoa}</td>
+            <td>${loaiThanhToan}</td>
+        </tr>
             `
             $('table tbody').append(dong);
-            $("#modalId").modal('hide');
-            $('#formDangKy')[0].reset();
+        $('#modalId').modal('hide');
+        $('#formDangKy')[0].reset();
         })
+        
     </script>
 </body>
 </html>
